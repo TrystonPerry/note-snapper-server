@@ -24,6 +24,9 @@ const generativeModel = vertex_ai.preview.getGenerativeModel({
 import express from "express";
 const app = express();
 
+import cors from "cors";
+app.use(cors());
+
 import bodyParser from "body-parser";
 
 app.use(bodyParser.json({ limit: "5gb" }));
